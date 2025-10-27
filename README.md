@@ -30,10 +30,6 @@ onHit:Fire(game.Players.LocalPlayer)
 -- Async firing
 onHit:FireAsync(game.Players.LocalPlayer)
 
--- Wait for next fire
-local player = onHit:Wait()
-print(player.Name .. " triggered the event!")
-
 -- Disconnect all listeners
 onHit:DisconnectAll()
 ```
