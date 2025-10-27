@@ -38,21 +38,30 @@ onHit:DisconnectAll()
 **`Signal(strictCheck: boolean?`)**
 - Creates a new signal.
 - If strictCheck is true, parallel-only environments are enforced.
+
 **`Signal:Connect(fn)`**
 - Connects a listener to the signal.
+
 **`Signal:Once(fn)`**
 - Connects a listener that disconnects automatically after one trigger.
+
 **`Signal:ConnectParallel(fn)`**
 - Runs the listener in a desynchronized task (for use in parallel code).
+  
 **`Signal:Fire(...any)`**
 - Fires all connected listeners synchronously.
+  
 **`Signal:FireAsync(...any)`**
 - Fires listeners asynchronously using pooled threads.
+  
 **`Signal:Wait()`**
 - Yields until the next Fire call.
+  
 **`Signal:DisconnectAll()`**
 - Removes all connections.
+  
 **`Signal:Destroy()`**
 - Destroys the signal and clears its connections.
+  
 **`SignalU.IsSignal(object)`**
 - Utility method to check if an object is a Signal.
